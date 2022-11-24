@@ -1,0 +1,8 @@
+baseURL = 'http://amadeusw.com/'
+languageCode = 'en-us'
+title = 'Amadeus'
+theme = 'ananke'
+SectionPagesMenu = 'menu'
+
+[params]
+  background_color_class = "bg-blue"
