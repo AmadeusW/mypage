@@ -5,4 +5,4 @@ type: page
 menu: main
 ---
 
-My recommendations if you were to visit some of my favorite places
+My recommendations for when you visit some of my favorite places.
