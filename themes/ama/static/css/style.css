@@ -1,0 +1,62 @@
+html {
+  margin: 0 auto;
+}
+body {
+  margin: 0 auto;
+}
+
+nav {
+  background: rgba(0, 255, 0, 0.3);
+  padding: 0.5em 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 0.3em;
+}
+
+header {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+header > #header-content {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  z-index:  1;
+}
+
+#header-content > .content {
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.title-wrapper {
+  display: inline-block;
+  padding: 0 1.5em;
+  background: rgba(255, 255, 255, 0.2);
+  text-shadow: 1px 1px 6px #fff;
+}
+
+header > img {
+  position: relative;
+  width: 100%
+}
+
+.content {
+  max-width: 95vw;
+  min-width: 35em;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* For photo album, use https://css-tricks.com/adaptive-photo-layout-with-flexbox/ */

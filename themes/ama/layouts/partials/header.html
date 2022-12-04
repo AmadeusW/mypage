@@ -1,8 +1,25 @@
-<nav>
-<strong><a href={{.Site.BaseURL}}>Amadeus</a></strong>
+<header>
+    <div id="header-content">
+        <div class="content">
+            <div class="title-wrapper">
+                <h1>{{.Title}}</h1>
+                {{ with .Params.subtitle }}
+                    <h2>{{ . }}</h2>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+    <img src="{{.Site.BaseURL}}{{ .Params.image}}" alt="{{.Params.image_alt}}" />
+</header>
 
+<nav>
 {{ $section := .Section }}
-<ul class="header">
+<ul class="header content">
+    {{ if .IsHome }}
+    <li class="home"><strong><a href={{.Site.BaseURL}}>Home</a></strong></li>
+    {{ else }}
+    <li class="home"><a href={{.Site.BaseURL}}>Home</a></li>
+    {{ end }}
 {{ range .Site.Sections }}
 <li>
     {{ if eq .Section $section }}
@@ -17,10 +34,3 @@
 </ul>
 </nav>
 
-<header>
-    <h1>{{.Title}}</h1>
-    {{ with .Params.subtitle }}
-        <h2>{{ . }}</h2>
-    {{ end }}
-    <img src="{{.Site.BaseURL}}{{ .Params.image}}" alt="{{.Params.image_alt}}" />
-</header>

@@ -1,9 +1,9 @@
 {{ define "main" }}
-<main>
-    <p class="content home">
+<main class="content">
+    <p class="home">
         {{.Content}}
     </p>
-    <div class="content list">
+    <div class="list">
         {{ range first 10 .Site.RegularPages}}
             {{ . }}
             {{.Render "summary"}}

@@ -7,7 +7,7 @@ image_alt: Poland Landscape
 ---
 
 ## Krakow
-Krakow is a hip and historic city in Poland. The historic city center comprises of city square and a castle which used to be surrounded by walls. Now the walls are a park circling the city center.
+Krakow is a historic and hip city in Poland. The Main Square, surrounding Old Town and the Wawel Castle used to be surrounded by walls. In place of walls, a park encircles the entirety of Old Town.
 
 ## Food
 Some of the best aspects of traveling to Poland are food: high quality, huge portion sizes, and great price.
