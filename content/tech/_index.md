@@ -1,8 +1,6 @@
 ---
 title: "Tech notes"
 date: 2022-11-23T21:06:31-08:00
-type: page
-menu: main
 ---
 
-Collection of notes, tips and tricks which I hope to reuse some day.
+Collection of notes, tips and tricks which might come in handy some day.

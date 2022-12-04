@@ -4,5 +4,4 @@ baseURL = 'http://amadeusw.com/'
 languageCode = 'en-us'
 
 [params]
-background_color_class = "bg-blue"
-cover_dimming_class = " "
+  subtitle = 'Hello and welcome to my corner of the internet.'

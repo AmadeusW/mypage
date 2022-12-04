@@ -1,7 +1,9 @@
 ---
-title: "Krakow"
+title: Krakow
+subtitle: Lajkonik
 date: 2022-11-23T21:06:47-08:00
-featured_image: 'polskasm.jpg'
+image: polskasm.jpg
+image_alt: Poland Landscape
 ---
 
 ## Krakow

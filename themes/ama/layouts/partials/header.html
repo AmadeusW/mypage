@@ -1,1 +1,26 @@
-<p>Header</p>
+<nav>
+<strong><a href={{.Site.BaseURL}}>Amadeus</a></strong>
+
+{{ $section := .Section }}
+<ul class="header">
+{{ range .Site.Sections }}
+<li>
+    {{ if eq .Section $section }}
+    <strong>
+        <a href="{{.RelPermalink}}">{{.Title}}</a>    
+    </strong>
+    {{ else }}
+        <a href="{{.RelPermalink}}">{{.Title}}</a>
+    {{ end }}
+</li>
+{{ end }}
+</ul>
+</nav>
+
+<header>
+    <h1>{{.Title}}</h1>
+    {{ with .Params.subtitle }}
+        <h2>{{ . }}</h2>
+    {{ end }}
+    <img src="{{.Site.BaseURL}}{{ .Params.image}}" alt="{{.Params.image_alt}}" />
+</header>

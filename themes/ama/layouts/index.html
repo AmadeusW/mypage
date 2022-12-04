@@ -1,2 +1,13 @@
-<h1>Amadeus' page</h1>
-<h2>Hello and welcome to my corner of the internet</h2>
+{{ define "main" }}
+<main>
+    <p class="content home">
+        {{.Content}}
+    </p>
+    <div class="content list">
+        {{ range first 10 .Site.RegularPages}}
+            {{ . }}
+            {{.Render "summary"}}
+        {{ end }}
+    </div>
+</main>
+{{ end }}
