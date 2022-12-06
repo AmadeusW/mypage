@@ -14,23 +14,13 @@
 
 <nav>
 {{ $section := .Section }}
-<ul class="header content">
-    {{ if .IsHome }}
-    <li class="home"><strong><a href={{.Site.BaseURL}}>Home</a></strong></li>
-    {{ else }}
-    <li class="home"><a href={{.Site.BaseURL}}>Home</a></li>
-    {{ end }}
+<div class="content navcontent">
+    <a class="link home {{ if .IsHome }} active {{ end }}" href={{.Site.BaseURL}}>{{.Site.Params.homelink}}</a>
 {{ range .Site.Sections }}
-<li>
-    {{ if eq .Section $section }}
-    <strong>
-        <a href="{{.RelPermalink}}">{{.Title}}</a>    
-    </strong>
-    {{ else }}
-        <a href="{{.RelPermalink}}">{{.Title}}</a>
-    {{ end }}
+    <a class="link {{ if eq .Section $section }} active {{end}}" href="{{.RelPermalink}}">{{.Title}}</a>    
 </li>
 {{ end }}
 </ul>
 </nav>
+
 

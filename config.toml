@@ -4,4 +4,5 @@ baseURL = 'http://amadeusw.com/'
 languageCode = 'en-us'
 
 [params]
+  homelink = 'Amadeus W'
   subtitle = 'Hello and welcome to my corner of the internet.'
