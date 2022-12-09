@@ -1,6 +1,16 @@
-<header>
-    <div id="header-content">
-        <div class="content">
+<nav class="accent_{{ .Type }}">
+    {{ $section := .Section }}
+    <div class="centered navcontent">
+        <a class="link home {{ if .IsHome }} active {{ end }}" href={{.Site.BaseURL}}>{{.Site.Params.homelink}}</a>
+        {{ range .Site.Sections }}
+            <a class="link {{ if eq .Section $section }} active {{end}}" href="{{.RelPermalink}}">{{.Title}}</a>    
+        {{ end }}
+    </div>
+</nav>
+
+<header class="accent_{{ .Type }}">
+    <div id="header-content" >
+        <div class="centered">
             <div class="title-wrapper">
                 <h1>{{.Title}}</h1>
                 {{ with .Params.subtitle }}
@@ -11,16 +21,4 @@
     </div>
     <img src="{{.Site.BaseURL}}{{ .Params.image}}" alt="{{.Params.image_alt}}" />
 </header>
-
-<nav>
-{{ $section := .Section }}
-<div class="content navcontent">
-    <a class="link home {{ if .IsHome }} active {{ end }}" href={{.Site.BaseURL}}>{{.Site.Params.homelink}}</a>
-{{ range .Site.Sections }}
-    <a class="link {{ if eq .Section $section }} active {{end}}" href="{{.RelPermalink}}">{{.Title}}</a>    
-</li>
-{{ end }}
-</ul>
-</nav>
-
 

@@ -2,7 +2,8 @@ body {
   margin: 0 auto;
   font-size: 20px;
   line-height: 1.6em;
-  font-family: Georgia, 'Times New Roman', Times, serif
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #f9f8f1;
 }
 
 a {
@@ -17,8 +18,17 @@ a:hover {
 }
 
 nav {
-  background: #bfb;
-  border: 2px solid #aea;
+  background: #f9f8f1;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.accent_travel {
+  border-color: #696;
+}
+
+.accent_tech {
+  border-color: #68a;
 }
 
 .navcontent {
@@ -29,26 +39,27 @@ nav {
 }
 
 nav .link {
-  margin: 0 0.8em;
-  padding: 0.4em 0;
+  padding: 0.4em 0.8em;
 }
 
 nav .link:hover {
-  background: #dfd;
+  background: #fff;
 }
 
 nav .active {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
+  background: #fdfcfa;
 }
 
 nav .home {
-  margin: 0 auto 0 0;
+  margin: 0 auto 0 -0.8em;
 }
 
 header {
   position: relative;
   height: 400px;
   overflow: hidden;
+  border-bottom: 1px solid #aaa;
 }
 
 header > #header-content {
@@ -59,7 +70,7 @@ header > #header-content {
   z-index:  1;
 }
 
-#header-content > .content {
+#header-content > .centered {
   margin: 0 auto;
   padding: 1em;
   text-shadow: 1px 1px 5px #fff;
@@ -70,11 +81,18 @@ header > img {
   width: 100%
 }
 
-.content {
+.centered {
   max-width: 95vw;
   min-width: 35em;
   width: 60%;
   margin: 0 auto;
+}
+
+#content > .centered {
+  background-color: #fdfcfa;
+  border: 1px dotted #aaa;
+  margin: 2em auto;
+  padding: 0.2em 1em 2em 1em;
 }
 
 main {
