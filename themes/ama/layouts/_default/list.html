@@ -3,9 +3,9 @@
     <article class="{{ .Type }}">
         {{.Content}}
     </article>
-    <div class = "articleList">
+    <div class="articleList">
         {{ range .Pages }}
-        <a href="{{.Permalink}}" class="article">
+        <a href="{{.Permalink}}" class="article accent_{{ .Type }}">
             <div>
                 {{.Title}}
             </div>
