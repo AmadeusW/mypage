@@ -1,4 +1,19 @@
-<nav class="accent_{{ .Type }}">
+<div id="title" class="containerelement" >
+    <header>
+        <h1>
+            {{.Title}}
+        </h1>
+    </header>
+</div>
+<div id="subtitle" class="accent_{{ .Type }} containerelement">
+{{ with .Params.subtitle }}
+    <h2>
+        {{ . }}
+    </h2>
+{{ end }}
+</div>
+
+<nav class="accent_{{ .Type }} containerelement">
     {{ $section := .Section }}
     <div class="centered navcontent">
         <a class="link home {{ if .IsHome }} active {{ end }}" href={{.Site.BaseURL}}>{{.Site.Params.homelink}}</a>
@@ -7,18 +22,4 @@
         {{ end }}
     </div>
 </nav>
-
-<header class="accent_{{ .Type }}">
-    <div id="header-content" >
-        <div class="centered">
-            <div class="title-wrapper">
-                <h1>{{.Title}}</h1>
-                {{ with .Params.subtitle }}
-                    <h2>{{ . }}</h2>
-                {{ end }}
-            </div>
-        </div>
-    </div>
-    <img src="{{.Site.BaseURL}}{{ .Params.image}}" alt="{{.Params.image_alt}}" />
-</header>
 

@@ -5,6 +5,53 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: #454;
   color: #ddd;
+  max-width: 95vw;
+  min-width: 35em;
+  width: 60%;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 80px auto 400px;
+  gap: 6px;
+  justify-content: space-between;
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+.containerelement {
+  background-color: #454;
+  border: 1px solid #fed;
+}
+
+
+#title {
+  grid-column: 1/1;
+  grid-row: 1/1;
+}
+
+#subtitle {
+  grid-column: 2/2;
+  grid-row: 1/1;
+}
+
+nav {
+  grid-column: 1/1;
+  grid-row: 2/2;
+}
+
+#content {
+  grid-column: 2/2;
+  grid-row: 2/2;
+}
+
+#footer {
+  grid-column: 1 / span 2;
+  grid-row: 3/3;
+  overflow-y: scroll;
 }
 
 a {
@@ -32,7 +79,7 @@ nav {
 
 .navcontent {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-end;
   align-items: stretch;
 }
@@ -50,10 +97,7 @@ nav .active {
   background: #565;
 }
 
-nav .home {
-  margin: 0 auto 0 -0.8em;
-}
-
+/*
 header {
   position: relative;
   height: 400px;
@@ -81,19 +125,12 @@ header > img {
   width: 100%
 }
 
-.centered {
-  max-width: 95vw;
-  min-width: 35em;
-  width: 60%;
-  margin: 0 auto;
-}
-
 #content > .centered {
   border: 1px dotted #aaa;
   margin: 2em auto;
   padding: 0.2em 1em 2em 1em;
 }
-
+*/
 main {
   line-height: 1.9em;
 }

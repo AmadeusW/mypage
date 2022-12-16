@@ -1,6 +1,9 @@
 {{define "main"}}
 <main class="centered">
     <article class="{{ .Type }}">
+        <p>
+            <img src="{{.Site.BaseURL}}{{ .Params.image}}" alt="{{.Params.image_alt}}" />
+        </p>
         {{.Content}}
     </article>
     <div class="articleList">
