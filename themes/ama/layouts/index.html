@@ -1,12 +1,35 @@
 {{ define "main" }}
-<main class="centered">
+<main>
+    <p>
+        <img src="{{.Site.BaseURL}}{{ .Params.image}}" alt="{{.Params.image_alt}}" />
+    </p>
     <p class="home">
         {{.Content}}
     </p>
-    <div class="list">
-        {{ range first 10 .Site.RegularPages}}
-            {{ . }}
-            {{.Render "summary"}}
+    <p>
+        Browse categories:
+    </p>
+    <div class="articleList">
+        {{ range .Sections }}
+        <a href="{{.Permalink}}" class="article accent_{{ .Type }}">
+            <div>
+                {{.Title}}
+                {{.Summary}}
+            </div>
+        </a>
+        {{end}}
+    </div>
+    <p>
+        A few recent posts:
+    </p>
+    <div class="articleList">
+        {{ range first 6 .Site.RegularPages}}
+        <a href="{{.Permalink}}" class="article accent_{{ .Type }}">
+            <div>
+                {{.Title}}
+                {{.Summary}}
+            </div>
+        </a>
         {{ end }}
     </div>
 </main>

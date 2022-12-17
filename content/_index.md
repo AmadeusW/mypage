@@ -1,8 +1,8 @@
 ---
-title: Amadeus' website
-subtitle: Welcome to my corner of the internet
+title: Welcome to my corner of the internet
+subtitle: Currently unused
 image: hohsm.jpg
 image_alt: Hoh Rainforest Landscape
 ---
 
-Hello and welcome! I mostly keep here notes for myself. If you find something useful here, that's a good fortune!
+Hello and welcome! I keep here notes for my future reference, but if you find something useful here, that's a good fortune! Cheers.
