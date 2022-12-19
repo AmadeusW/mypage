@@ -21,4 +21,4 @@ The next time you run command prompt, the PATH will be reset to its original val
 
 Don't forget that holding shift when right-clicking in folder's window adds the convenient "Open command window here" menu item!
 
-![exception screenshot](techBlogData//temporarily-add-current-directory-to-path/open-command-window-here.png)
+![exception screenshot](/techBlogData//temporarily-add-current-directory-to-path/open-command-window-here.png)

@@ -10,7 +10,7 @@ tags: [xaml, ui, windows]
 
 Working on the user interface can take disproportionate amount of time. I usually do the logic work first, and UI last, in the spare time. In the smart mirror project the UI is very bare bones: it's only here to test data bindings. Let's improve the looks of it.
 
-![no theming applied](techBlogData//xaml-cheat-sheet/initial.png)
+![no theming applied](/techBlogData//xaml-cheat-sheet/initial.png)
 
 Table of contents:
 
@@ -46,7 +46,7 @@ change this into
 
 Drastically changes the appearance of the app:
 
-![dark theme](techBlogData//xaml-cheat-sheet/dark.png)
+![dark theme](/techBlogData//xaml-cheat-sheet/dark.png)
 
 # Put styles in their own file
 
@@ -81,7 +81,7 @@ Let's try to theme all instances of `TextBlock`. To do this, create a `Style` wi
 
 This works for free-standing `TextBlocks`, but not for these embedded in a template, e.g. `DataTemplate`
 
-![doesn't work with templates](techBlogData//xaml-cheat-sheet/no-template.png)
+![doesn't work with templates](/techBlogData//xaml-cheat-sheet/no-template.png)
 
 # Style specific TextBlocks
 
@@ -109,7 +109,7 @@ To use these styles, assign appropriate `StaticResource` to element's `Style`. H
 <TextBlock Style="{StaticResource VeryLargeText}" />
 ```
 
-![each element gets styled](techBlogData//xaml-cheat-sheet/various-styles.png)
+![each element gets styled](/techBlogData//xaml-cheat-sheet/various-styles.png)
 
 # Modify the default theme
 
@@ -131,7 +131,7 @@ For the sake of showing an example, we will modify application's background whic
       </ResourceDictionary.ThemeDictionaries>
 ```
 
-![changed background color](techBlogData//xaml-cheat-sheet/background-color.png)
+![changed background color](/techBlogData//xaml-cheat-sheet/background-color.png)
 
 How did I know to change `ApplicationPageBackgroundThemeBrush`?
 
@@ -200,7 +200,7 @@ private void TimeOfDayChangedHandler(bool nightFall)
 
 Here's the result:
 
-![gif of changing themes](techBlogData//xaml-cheat-sheet/changing-theme.gif)
+![gif of changing themes](/techBlogData//xaml-cheat-sheet/changing-theme.gif)
 
 So far so good. This is the first time I was able to change anything on the screen! Now we need to overwrite the light theme such that it looks like the dark theme. Notice that this will force users of your app to use the dark theme, despite their personalized system settings. This will also force you to stick to one theme, as the other one will be sacrificed for the effect.
 
@@ -222,7 +222,7 @@ So far so good. This is the first time I was able to change anything on the scre
 
 Now, we are done. Notice the letters change from light blue to light yellow.
 
-![final gif of changing themes](techBlogData//xaml-cheat-sheet/changing-theme-complete.gif)
+![final gif of changing themes](/techBlogData//xaml-cheat-sheet/changing-theme-complete.gif)
 
 
 # Conditionally display UI elements
@@ -249,4 +249,4 @@ And use it in the following way:
 
 This screenshot was taken halfway through UI redesign. The rain and snow quantities are shown only when they're non-zero.
 
-![conditionally displaying rain information](techBlogData//xaml-cheat-sheet/conditional-rain.png)
+![conditionally displaying rain information](/techBlogData//xaml-cheat-sheet/conditional-rain.png)
