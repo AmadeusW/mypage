@@ -24,13 +24,13 @@ See [Raspberry Pi 2 Pin Mappings](https://ms-iot.github.io/content/en-US/win10/s
 * Use either Pi's `SPI CS0` or `SPI CS1` pin, you can pick one to use in the code 
  * this means that you can independently connect two SPI devices
 
-![circuit diagram](/techBlogData/connect-to-ADC-using-SPI-in-windows-10/circuit.png)
+![circuit diagram](techBlogData//connect-to-ADC-using-SPI-in-windows-10/circuit.png)
 
 # Connecting to SPI device
 
 To connect to the ADC, you need to obtain an instance of `SpiDevice` from `Widows.Devices.Spi` namespace. To access this namespace, you need to first add a reference to "Windows IoT Extensions for the UWP"
 
-![adding a reference](/techBlogData/connect-to-ADC-using-SPI-in-windows-10/reference.png)
+![adding a reference](techBlogData//connect-to-ADC-using-SPI-in-windows-10/reference.png)
 
 Alright, let's instantiate the `SpiDevice`. This code is adapted from the Potentiometer Sensor Sample.
 

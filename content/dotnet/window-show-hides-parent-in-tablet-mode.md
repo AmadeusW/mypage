@@ -12,7 +12,7 @@ In Windows 10 Tablet Mode, the active window is always maximized and other windo
 *In this gif we are trying to create a red 200px x 200px popup window. 
 In tablet mode it maximizes and white parent window minimizes.*
 
-![demo gif](/techBlogData/window-show-hides-parent-in-tablet-mode/demo.gif)
+![demo gif](techBlogData//window-show-hides-parent-in-tablet-mode/demo.gif)
 
 This is not a desired behavior for small popup windows. To fix it, disallow the window from maximizing: 
 Set `ResizeMode` property to either `NoResize` or `CanMinimize`. 

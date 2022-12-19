@@ -74,7 +74,7 @@ The good news is that UWP provides access to more than user's Documents. We have
 
 To access files located where `.exe` is, we just need to set the file's **Build Action** to `Content`. **Copy to Output Directory** doesn't matter. 
 
-![file properties](/techBlogData/custom-resource-files-in-uwp-windows-10/file-properties.png)
+![file properties](techBlogData//custom-resource-files-in-uwp-windows-10/file-properties.png)
 
 You can access the file using URI (read more about URIs in [Microsoft's tutorial](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh965322.aspx))
 
@@ -127,7 +127,7 @@ I just wanted to show how to use the most basic flavor of this approach, just to
 2. Save all, check the empty file into the source control and immediately ignore it (see "Protect the API token" section above)
 3. Double click on the newly added file and add type in the API token.
 
-![resource file properties](/techBlogData/custom-resource-files-in-uwp-windows-10/resource-properties.png)
+![resource file properties](techBlogData//custom-resource-files-in-uwp-windows-10/resource-properties.png)
 
 To access the token from the code, create an instance of `ResourceLoader`, passing in the name of the resource file *without the extension*.
 Suppose you created `resourcesFile.resw` and added a line with the key `secret`:
