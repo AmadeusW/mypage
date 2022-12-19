@@ -1,7 +1,6 @@
 ---
 title: Welcome to my corner of the internet
-subtitle: Currently unused
-image: hohsm.jpg
+image: /hohsm.jpg
 image_alt: Hoh Rainforest Landscape
 ---
 

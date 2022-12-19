@@ -1,7 +1,7 @@
 ---
 title: Soldering audio jack (phone connector)
 summary: "Comes in handy when your speakers have a non-removable cable."
-image: "techBlogData/solder-audio-jack/audiojack.jpg"
+image: "/techBlogData/solder-audio-jack/audiojack.jpg"
 date: 2016-02-28
 category: hardware
 permalink: hardware/solder-3-5-mm-audio-jack
