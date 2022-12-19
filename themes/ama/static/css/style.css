@@ -6,7 +6,7 @@ body {
   background-color: #454;
   color: #ddd;
   max-width: 95vw;
-  min-width: 35em;
+  min-width: 45em;
   width: 60%;
 }
 
@@ -111,8 +111,9 @@ a:hover {
 }
 
 main {
-  background: #565;
+  /*background: #565;*/
   line-height: 1.9em;
+  padding: 0.4em 0;
 }
 
 main img {
@@ -125,23 +126,39 @@ main img {
 
 .articleList {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-direction: column;
   justify-content: space-between;
   list-style-type: none;
 }
 
-.articleList .article {
+.article {
   display: block;
-  width: 45%;
+  /*width: 45%; uncomment if .articleList flex-wrap is wrap*/
   background-color: #464;
-  border: 2px solid #aaa;
-  padding: 0.5em;
-  margin: 0.5em 0;
+  border: 1px solid #aaa;
+  padding: 0.7em;
+  margin: 0.3em 0;
 }
 
-.articleList .article:hover {
+.article:hover {
   background-color: #575;
-  border: 2px solid #aea;
+  border: 1px solid #aea;
 }
+
+.article>div {
+  display: flex;
+  flex-direction: column;
+}
+
+.articleheader {
+  /*text-align: center;*/
+  margin-bottom: 1em;
+}
+
+.articlesummary {
+  font-style: italic;
+}
+
 
 /* For photo album, use https://css-tricks.com/adaptive-photo-layout-with-flexbox/ */

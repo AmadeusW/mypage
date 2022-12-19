@@ -11,12 +11,7 @@
     </p>
     <div class="articleList">
         {{ range .Sections }}
-        <a href="{{.Permalink}}" class="article accent_{{ .Type }}">
-            <div>
-                {{.Title}}
-                {{.Summary}}
-            </div>
-        </a>
+            {{ partial "listitem.html" . }}
         {{end}}
     </div>
     <p>
@@ -24,12 +19,7 @@
     </p>
     <div class="articleList">
         {{ range first 6 .Site.RegularPages}}
-        <a href="{{.Permalink}}" class="article accent_{{ .Type }}">
-            <div>
-                {{.Title}}
-                {{.Summary}}
-            </div>
-        </a>
+            {{ partial "listitem.html" . }}
         {{ end }}
     </div>
 </main>
