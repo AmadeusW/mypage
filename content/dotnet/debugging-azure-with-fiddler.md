@@ -1,6 +1,7 @@
 ---
 title: Using Fiddler to debug Azure exceptions 
 date: 2015-08-31
+summary: "A workaround to access exception data which should have been available in the first place."
 category: debugging
 permalink: debugging/debugging-azure-with-fiddler/
 tags: [dotnet, azure, debugging]
@@ -8,7 +9,7 @@ tags: [dotnet, azure, debugging]
 
 Today I was fixing `Unexpected response code for operation : 12` exception thrown from `ExecuteBatch` method of `Microsoft.WindowsAzure.Storage.Table.CloudTable`. The exception doesn't have much useful information to aid debugging.  Both `InnerException` and `Data` properties are empty. 
 
-![exception screenshot](/blogData/debugging-azure-with-fiddler/exception.png)
+![exception screenshot](/techBlogData/debugging-azure-with-fiddler/exception.png)
 
 Quick search shows that this exception could mean pretty much anything, but common error scenarios follow a pattern. 
 
@@ -19,7 +20,7 @@ Quick search shows that this exception could mean pretty much anything, but comm
 
 Run Fiddler. In the left side pane, find the entry associated with your app's communication with Azure. In my case, the hostname was `<tablename>.table.core.windows.net`, the URL was `$/batch` and the process was `iisexpress`.
 Then, in the bottom-right pane click `TextView` to see the server's response
-![fiddler screenshot](/blogData/debugging-azure-with-fiddler/fiddler.png)
+![fiddler screenshot](/techBlogData/debugging-azure-with-fiddler/fiddler.png)
 
 The text view contained more detailed error information:
 

@@ -1,6 +1,8 @@
 ---
 title: Practical animations in XAML
 date: 2014-09-30
+summary: "You could do really cool stuff in 2014!"
+weight: 2
 category: ui
 permalink: ui/practical-animations-xaml
 tags: [xaml ui csharp]
@@ -19,7 +21,7 @@ Each message animates twice: first, when it's added to the collection and first 
 
 Both animations are defined as [resources](http://msdn.microsoft.com/en-us/library/system.windows.frameworkelement.resources(v=vs.110).aspx) of [ItemsControl](http://msdn.microsoft.com/en-us/library/system.windows.controls.itemscontrol(v=vs.110).aspx), and invoked by [DataTrigger](http://msdn.microsoft.com/en-us/library/system.windows.datatrigger(v=vs.110).aspx) in [ItemsControl.ItemContainerStyle](http://msdn.microsoft.com/en-us/library/system.windows.controls.itemscontrol.itemcontainerstyle(v=vs.110).aspx). We are using ItemsControl element because it offers the most rendering flexibility.
 
-{% highlight xml %}
+```xml
 <ItemsControl.Resources>
   <Storyboard x:Key="enterStoryboard">
       <ThicknessAnimation Storyboard.TargetProperty="Margin"
@@ -49,9 +51,9 @@ Both animations are defined as [resources](http://msdn.microsoft.com/en-us/libra
     </Style.Triggers>
   </Style>
 </ItemsControl.ItemContainerStyle>
-{% endhighlight %}
+```
 
-The DataTrigger fires the animation whenever property **IsAlive** is found to be **true**. Here, we instantiate it to **true** in each **MessageObject**.
+The DataTrigger fires the animation whenever property `IsAlive` is found to be `true`. Here, we instantiate it to `true` in each `MessageObject`.
 
 Let's see how it looks like:
 
@@ -62,9 +64,9 @@ Let's see how it looks like:
 
 The slide-out effect for removed messages gets a bit more tricky. Once the element is removed from the collection, we can't animate it, because its graphical representation disappears.
 
-We will use the property **IsAlive** to trigger the slide-out animation, and we will actually remove the message from the collection after the animation completes. Similarly to the enter animation, the exit animation is triggered by setting **isAlive** to **false**. This can be defined twofold in XAML:
+We will use the property `IsAlive` to trigger the slide-out animation, and we will actually remove the message from the collection after the animation completes. Similarly to the enter animation, the exit animation is triggered by setting `isAlive` to `false`. This can be defined twofold in XAML:
 
-{% highlight xml %}
+```xml
 <!-- Simple approach, but may break if IsAlive is not initialized to true -->
  
 <DataTrigger Binding="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=DataContext.IsAlive}" Value="True">
@@ -97,13 +99,13 @@ We will use the property **IsAlive** to trigger the slide-out animation, and we 
     </BeginStoryboard>
   </DataTrigger.EnterActions>
 </DataTrigger>        
-{% endhighlight %}
+```
 
 Ideally, we would listen to StoryboardCompleted event and remove the item once the framework tell us that the animation has completed. However, the StoryboardCompleted event doesn't have a reference to the removed item or the collection. How would we know which item to remove from the collection?
 
 We need to wait agreed amount of time in the code-behind before the element can be removed from the collection. This is not an ideal solution, but I can't think of another way to achieve this.
 
-{% highlight csharp %}
+```csharp
 internal void RemoveMessage(object parameter)
 {
     var message = parameter as MessageObject;
@@ -132,7 +134,7 @@ private void acutallyRemoveMessageFromCollection(MessageObject message)
             }
         ));
 }
-{% endhighlight %}
+```
 
 Here's how it looks like:
 
@@ -142,9 +144,9 @@ Here's how it looks like:
 </video>
 
 We can see the item occupies its space as it animates out, and other items abruptly jump in its space after the item is removed. 
-We can address that by adding a slide-up animation to the **exitStoryboard**. The second animation starts only when the first animation ends (note the **BeginTime**). The animation changes the top margin of the item to -50, effectively dragging it up. We're happy to see that all items below it also move up!
+We can address that by adding a slide-up animation to the `exitStoryboard`. The second animation starts only when the first animation ends (note the `BeginTime`). The animation changes the top margin of the item to -50, effectively dragging it up. We're happy to see that all items below it also move up!
 
-{% highlight xml %}
+```xml
 <Storyboard x:Key="exitStoryboard">
     <ThicknessAnimation Storyboard.TargetProperty="Margin"
                                                      Duration="00:00:00.25"
@@ -167,7 +169,7 @@ We can address that by adding a slide-up animation to the **exitStoryboard**. Th
                                                      DecelerationRatio="1"                                        
                                                      FillBehavior="HoldEnd" />                
 </Storyboard>
-{% endhighlight %}
+```
 
 Now we only need to change the code-behind to wait for both animations to finish before removing the element, so we change the delay from 250ms to 500ms. That's the final effect:
 

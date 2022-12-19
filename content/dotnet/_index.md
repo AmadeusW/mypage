@@ -5,4 +5,4 @@ showTags: true
 weight: 99
 ---
 
-Collection of notes, tips and tricks about the .net ecosystem which might come in handy some day, but some of them are relics of the past.
+Archive of notes, tips and tricks about the .net ecosystem as it was back in 2015, making most of them relics of the past.

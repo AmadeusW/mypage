@@ -1,6 +1,8 @@
 ---
 title: Custom resource files in UWP
 date: 2016-01-22
+summary: "Storing secrets in UWP apps"
+weight: 5
 category: iot
 permalink: iot/custom-resource-files-in-uwp-windows-10
 tags: [iot, csharp, windows]
@@ -30,7 +32,7 @@ When an API token is leaked, you need to invalidate it. Ensure that a new token 
 To provide some background, I stored the secret token in git-ignored `Sensitive.config` file ([see the file on GitHub](https://github.com/CodeConnect/SourceBrowser/blob/9848ba033619d9887e1c358bc721284c29ebe8e2/src/Security.config))
 
 ```xml
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <appSettings>
 	<add key="secret" value="" />
 </appSettings>
@@ -72,7 +74,7 @@ The good news is that UWP provides access to more than user's Documents. We have
 
 To access files located where `.exe` is, we just need to set the file's **Build Action** to `Content`. **Copy to Output Directory** doesn't matter. 
 
-![file properties](/blogData/custom-resource-files-in-uwp-windows-10/file-properties.png)
+![file properties](/techBlogData/custom-resource-files-in-uwp-windows-10/file-properties.png)
 
 You can access the file using URI (read more about URIs in [Microsoft's tutorial](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh965322.aspx))
 
@@ -125,7 +127,7 @@ I just wanted to show how to use the most basic flavor of this approach, just to
 2. Save all, check the empty file into the source control and immediately ignore it (see "Protect the API token" section above)
 3. Double click on the newly added file and add type in the API token.
 
-![resource file properties](/blogData/custom-resource-files-in-uwp-windows-10/resource-properties.png)
+![resource file properties](/techBlogData/custom-resource-files-in-uwp-windows-10/resource-properties.png)
 
 To access the token from the code, create an instance of `ResourceLoader`, passing in the name of the resource file *without the extension*.
 Suppose you created `resourcesFile.resw` and added a line with the key `secret`:

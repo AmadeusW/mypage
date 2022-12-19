@@ -1,6 +1,8 @@
 ---
 title: Animated navigation in Universal Apps
 date: 2016-04-24
+summary: "Animated examples of Page.Transitions"
+weight: 5
 category: xaml
 permalink: xaml/animated-navigation-universal-app
 tags: [xaml, ui, windows]
@@ -9,7 +11,7 @@ tags: [xaml, ui, windows]
 Let's explore different ways to animate the navigation across Frames in an Universal App.
 These animations are called Transitions, and UWP provides a few kinds to choose from. 
 
-![banner image](/blogData/animated-navigation-universal-app/animation.png)
+![banner image](/techBlogData/animated-navigation-universal-app/animation.png)
 
 We will see how easy it is to create a [transition coming out from and going back to a left edge](#directional-animation) of the screen. With some extra code, we will create [transitions that look like continuous scrolling](#continuous-swiping-animation) in one direction. Finally, we will see [demo videos](#demo-of-all-transitions) of all transitions. 
 

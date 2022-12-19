@@ -1,6 +1,7 @@
 ---
 title: Publicly signing assemblies in the Common Project System
 date: 2017-07-11
+summary: "Yet another obscure workaround for an obscure bug."
 category: dotnet
 permalink: dotnet/public-signed-assemblies-in-the-common-project-system
 tags: [dotnet]
