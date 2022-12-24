@@ -4,6 +4,7 @@ date: 2022-11-23T21:06:47-08:00
 image: /polskasm.jpg
 image_alt: Poland Landscape
 summary: A brief summary.
+draft: true
 ---
 
 ## Krakow

@@ -1,5 +1,5 @@
 ---
-title: 'Tech notes: .net'
+title: '.net'
 date: 2022-11-23T21:06:31-08:00
 showTags: true
 weight: 99

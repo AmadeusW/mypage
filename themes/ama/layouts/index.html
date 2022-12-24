@@ -6,10 +6,7 @@
     <p class="home">
         {{.Content}}
     </p>
-    <p>
-        Browse categories:
-    </p>
-    <div class="articleList">
+    <div class="postList">
         {{ range .Sections }}
             {{ partial "listitem.html" . }}
         {{end}}
@@ -17,7 +14,7 @@
     <p>
         A few recent posts:
     </p>
-    <div class="articleList">
+    <div class="postList">
         {{ range first 6 .Site.RegularPages}}
             {{ partial "listitem.html" . }}
         {{ end }}
